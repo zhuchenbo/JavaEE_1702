@@ -43,6 +43,7 @@
         </c:when>
         <c:otherwise>
             <tr>
+                <th>勾选</th>
                 <th>序号</th>
                 <th>姓名</th>
                 <th>性别</th>
@@ -84,6 +85,7 @@
 
     <c:forEach var="student" items="${sessionScope.students}" varStatus="vs">        <%--begin="1" 起始于第一条  end="1" 终止于第一条--%>
         <tr>
+            <td></td>
             <td>${vs.count}</td>
             <td>${student.name}</td>
             <td>${student.gender}</td>
