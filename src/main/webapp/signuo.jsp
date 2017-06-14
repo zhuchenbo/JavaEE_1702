@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>sign up page</title>
@@ -23,11 +24,12 @@
     <input type="submit" value="注册">
     <p><a href="user?action=logout">返回首页</a></p>
 </form>
-<%
-    String message = (String) request.getAttribute("message");
-    if (message != null) {
-        out.print(message);
-    }
-%>
+${requestScope.message}
+<%--<%--%>
+    <%--String message = (String) request.getAttribute("message");--%>
+    <%--if (message != null) {--%>
+        <%--out.print(message);--%>
+    <%--}--%>
+<%--%>--%>
 </body>
 </html>
