@@ -4,17 +4,23 @@
     <title>index page</title>
 </head>
 <body>
-<h1>登录</h1>
-<form action="login.jsp">
-    <input type="text" name="mobile" placeholder="手机号"><br>
-    <input type="password" name="password" placeholder="密码"><br>
+<h1>登录
+</h1>
+<form action="user" method="post">
+    <input type="hidden" name="action" value="login">
+    <p><input type="text" name="mobile" placeholder="手机号"></p>
+    <p><input type="password" name="password" placeholder="密码"></p>
     <input type="submit" value="登录">
 </form>
-<%--<p><%=request.getAttribute("message")%></p>--%>
-<p><%String message=(String) request.getAttribute("message");
-if (message!=null){
-    out.print(message);
-}%></p>
+<%--<%=(request.getAttribute("message") != null) ? request.getAttribute("message") : ""%>--%>
+<p>
+    <%
+        String message = (String) request.getAttribute("message");
+        if (message != null) {
+            out.print(message);
+        }
+    %>
+</p>
 <a href="signuo.jsp">注册</a>
 </body>
 </html>
