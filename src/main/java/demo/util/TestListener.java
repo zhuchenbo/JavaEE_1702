@@ -12,12 +12,12 @@ import javax.servlet.annotation.WebListener;
 @WebListener
 public class TestListener implements ServletRequestListener {
     @Override
-    public void requestDestroyed(ServletRequestEvent sre) {// event 事件
+    public void requestDestroyed(ServletRequestEvent sre) {// event 事件  request Destroyed 请求破坏
         System.out.println("requestDestroyed");
     }
 
     @Override
-    public void requestInitialized(ServletRequestEvent sre) {
-        System.out.println("requestInitialized");
+    public void requestInitialized(ServletRequestEvent sre) {  //  request Initialized  请求初始化
+         System.out.println("requestInitialized");
     }
 }
