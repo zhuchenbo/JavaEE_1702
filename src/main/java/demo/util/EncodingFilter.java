@@ -9,6 +9,7 @@ import java.io.IOException;
  * on 2017/6/14
  * filter 过滤器  encoding 编码
  * 可以使用中文名字
+ *
  */
 @WebFilter(urlPatterns = "/*")
 public class EncodingFilter  implements Filter {
